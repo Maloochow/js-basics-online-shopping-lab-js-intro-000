@@ -54,6 +54,17 @@ function removeFromCart(item) {
   }
 }
 
+function removeFromCart(item) {
+  for (let i = 0; i < cart.length; i += 1) {
+    if (item === cart[i].itemName) {
+      cart.splice(i, 1);
+      return cart;
+    } else {
+    return "That item is not in your cart."
+  }
+}
+}
+
 function placeOrder(cardNumber) {
   if (cardNumber === undefined)  {
     return "Sorry, we don't have a credit card on file for you."
